@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+
+import DropDown from "./DropDown";
+
+const initialOptions = [
+  { value: "chocolate", label: "Chocolate", checked: false },
+  { value: "strawberry", label: "Strawberry", checked: false },
+  { value: "vanilla", label: "Vanilla", checked: false },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DropDown initialOptions={initialOptions} single/>
     </div>
   );
 }
